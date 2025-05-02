@@ -1,0 +1,1 @@
+module.exports = {"siteUrl": "https://web-app-red-moon.reflex.run", "generateRobotsTxt": true, "outDir": "_static"}

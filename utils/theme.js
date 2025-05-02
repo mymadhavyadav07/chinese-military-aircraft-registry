@@ -1,0 +1,1 @@
+export default ({ ["styles"] : ({ ["global"] : ({ [":root"] : ({  }), ["body"] : ({ ["fontFamily"] : "Inter", ["--default-font-family"] : "Inter" }) }) }) })
