@@ -3,11 +3,11 @@
 
 import { Fragment, memo, useContext, useEffect, useState } from "react"
 import { E, Event, getBackendURL, isTrue, refs } from "$/utils/state"
-import { toast, Toaster } from "sonner"
 import { ColorModeContext, EventLoopContext } from "$/utils/context"
 import { WifiOff as LucideWifiOff } from "lucide-react"
 import { keyframes } from "@emotion/react"
 import env from "$/env.json"
+import { toast, Toaster } from "sonner"
 
 
 
@@ -21,20 +21,6 @@ const pulse = keyframes`
 `
 
 
-
-export const MemoizedToastProvider = memo(({}) => {
-    
-  const { resolvedColorMode } = useContext(ColorModeContext)
-
-  refs['__toast'] = toast
-
-
-
-    return(
-        <Toaster closeButton={false} expand={true} position={"bottom-right"} richColors={true} theme={resolvedColorMode}/>
-      )
-
-})
 
 export const DefaultOverlayComponents = memo(({}) => {
     
@@ -78,6 +64,20 @@ export const DefaultOverlayComponents = memo(({}) => {
 </div>
 <Fragment/>
 </Fragment>
+      )
+
+})
+
+export const MemoizedToastProvider = memo(({}) => {
+    
+  const { resolvedColorMode } = useContext(ColorModeContext)
+
+  refs['__toast'] = toast
+
+
+
+    return(
+        <Toaster closeButton={false} expand={true} position={"bottom-right"} richColors={true} theme={resolvedColorMode}/>
       )
 
 })
